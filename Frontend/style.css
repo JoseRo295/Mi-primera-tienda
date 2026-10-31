@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.encabezado {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.logo span {
+  color: #1f2937;
+}
+
+.lista_navegacion {
+  display: flex;
+  gap: 24px;
+}
+
+.elemento_lista {
+  list-style: none;
+}
+
+.elemento_lista a {
+  font-weight: 600;
+  color: #4b5563;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.elemento_lista a:hover {
+  color: #4f46e5;
+  border-bottom-color: #4f46e5;
+}
+
+.portada {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.portada h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.portada p {
+  font-size: 18px;
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+.portada .boton {
+  background: #ffffff;
+  color: #4f46e5;
+}
+
+.contenido {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.seccion {
+  margin-bottom: 40px;
+}
+
+.titulo_seccion {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.lista_productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta_producto {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta_producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.id_producto {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.nombre_producto {
+  font-size: 20px;
+}
+
+.descripcion_producto {
+  color: #4b5563;
+  flex-grow: 1;
+}
+
+.precio_producto {
+  font-size: 22px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.stock_producto {
+  font-size: 14px;
+  color: #059669;
+}
+
+.cabecera_catalogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cabecera_catalogo .titulo_seccion {
+  margin-bottom: 0;
+}
+
+.filtro {
+  display: flex;
+  gap: 10px;
+}
+
+.filtro input {
+  width: 160px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.filtro input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.tarjeta_formulario {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formulario label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  margin-bottom: 8px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.boton {
+  display: inline-block;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.boton:hover {
+  opacity: 0.85;
+}
+
+.botones_tarjeta {
+  display: flex;
+  gap: 10px;
+}
+
+.boton_editar {
+  background: #f59e0b;
+  padding: 8px 16px;
+}
+
+.boton_eliminar {
+  background: #ef4444;
+  padding: 8px 16px;
+}
+
+.acciones_formulario {
+  display: flex;
+  gap: 10px;
+}
+
+.boton_cancelar {
+  background: #6b7280;
+}
+
+.oculto {
+  display: none;
+}
+
+.mensaje {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.exito {
+  color: #059669;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.pie {
+  background: #1f2937;
+  color: #d1d5db;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .navegacion {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .portada h1 {
+    font-size: 30px;
+  }
+
+  .filtro {
+    width: 100%;
+  }
+
+  .filtro input {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <nav class="navegacion">
+            <a href="#inicio" class="logo">Mi<span>Tienda</span></a>
+            <ul class="lista_navegacion">
+                <li class="elemento_lista"><a href="#inicio">Inicio</a></li>
+                <li class="elemento_lista"><a href="#catalogo">Catálogo</a></li>
+                <li class="elemento_lista"><a href="#registro">Registrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="portada">
+        <h1>Bienvenido a mi tienda</h1>
+        <p>Registra, consulta y administra los productos de tu catálogo.</p>
+        <a href="#catalogo" class="boton">Ver productos</a>
+    </section>
+
+    <main class="contenido">
+        <section id="catalogo" class="seccion">
+            <div class="cabecera_catalogo">
+                <h2 class="titulo_seccion">Catálogo de productos</h2>
+                <form id="formulario_busqueda" class="filtro">
+                    <input type="number" id="buscar_id" min="1" placeholder="Buscar por ID" required>
+                    <button type="submit" class="boton">Buscar</button>
+                    <button type="button" id="boton_todos" class="boton boton_cancelar">Ver todos</button>
+                </form>
+            </div>
+            <p id="mensaje_catalogo" class="mensaje"></p>
+            <div id="lista_productos" class="lista_productos"></div>
+        </section>
+
+        <section id="registro" class="seccion tarjeta_formulario">
+            <h2 id="titulo_formulario" class="titulo_seccion">Registrar producto</h2>
+            <form id="formulario_producto" class="formulario">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required>
+
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" rows="3" required></textarea>
+
+                <div class="fila">
+                    <div>
+                        <label for="precio">Precio ($)</label>
+                        <input type="number" id="precio" step="0.01" min="0.01" required>
+                    </div>
+                    <div>
+                        <label for="stock">Stock</label>
+                        <input type="number" id="stock" step="1" min="0" required>
+                    </div>
+                </div>
+
+                <div class="acciones_formulario">
+                    <button type="submit" id="boton_guardar" class="boton">Guardar producto</button>
+                    <button type="button" id="boton_cancelar" class="boton boton_cancelar oculto">Cancelar</button>
+                </div>
+                <p id="mensaje_registro" class="mensaje"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>Mi primera tienda virtual UIDE</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
